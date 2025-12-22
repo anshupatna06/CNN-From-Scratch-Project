@@ -170,13 +170,7 @@ Research-oriented learning approach
 ⭐ If you find this project helpful, feel free to star the repository!
 
 
----
+-----------------------------------------
 
-# 📦 `requirements.txt`
-
-```text
-numpy
-matplotlib
-jupyter
 
 
