@@ -25,7 +25,7 @@ class SimpleCNN:
         )
         self.b = np.zeros(self.num_filters)
 
-        # 🔥 CORRECT Dense input size
+        # CORRECT Dense input size
         # After conv (padding=1): 28x28
         # After pool (2x2): 14x14
         # Channels = num_filters
