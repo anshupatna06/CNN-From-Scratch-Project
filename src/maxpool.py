@@ -11,7 +11,7 @@ class MaxPool:
         PH = PW = self.pool_size
         stride = self.stride
 
-        # ✅ robust output size
+        # robust output size
         out_h = (H - PH) // stride + 1
         out_w = (W - PW) // stride + 1
 
