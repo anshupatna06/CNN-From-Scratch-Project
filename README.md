@@ -11,7 +11,7 @@ The goal is deep conceptual understanding + practical engineering skills.
 Most projects show how to use CNNs.
 This project shows how CNNs actually work internally.
 
-🔍 Why This Project Matters
+# 🔍 Why This Project Matters
 
 Builds CNNs mathematically from first principles
 
@@ -31,7 +31,7 @@ Research-oriented learning
 
 Systems-level understanding of deep learning
 
-🗂️ Repository Structure
+# 🗂️ Repository Structure
 CNN-From-Scratch-Project/
 │
 ├── scratch_cnn/                 # NumPy-only implementation
@@ -64,7 +64,7 @@ CNN-From-Scratch-Project/
 ├── requirements.txt
 └── README.md
 
-🧠 CNN Architecture (Both Versions)
+# 🧠 CNN Architecture (Both Versions)
 Input Image (N, 1, 28, 28)
 ↓
 Convolution (3×3 filters)
@@ -81,7 +81,7 @@ Softmax
 ↓
 Cross-Entropy Loss
 
-🧪 Implementation 1: CNN From Scratch (NumPy)
+# 🧪 Implementation 1: CNN From Scratch (NumPy)
 ✅ What’s implemented manually
 
 Convolution (forward & backward)
@@ -100,7 +100,7 @@ Gradient computation using chain rule
 
 Shape-safe tensor handling
 
-🧠 Concepts Covered
+# 🧠 Concepts Covered
 
 Sliding window convolution
 
@@ -116,7 +116,7 @@ Manual backpropagation
 
 This implementation does not use TensorFlow or PyTorch — only NumPy.
 
-⚡ Implementation 2: CNN Using PyTorch
+# ⚡ Implementation 2: CNN Using PyTorch
 ✅ What’s included
 
 Modular CNN model (nn.Module)
@@ -131,7 +131,7 @@ GPU-ready architecture
 
 Comparison with scratch implementation
 
-🎯 Purpose
+# 🎯 Purpose
 
 Show production-style ML engineering
 
@@ -139,7 +139,7 @@ Validate scratch implementation correctness
 
 Bridge theory → real-world ML pipelines
 
-📊 Visualizations
+# 📊 Visualizations
 
 Generated through notebooks:
 
@@ -173,7 +173,7 @@ notebooks/CNN_PyTorch.ipynb
 
 Run cells top-to-bottom.
 
-🧪 Notes
+# 🧪 Notes
 
 Scratch CNN uses synthetic / small-scale data for clarity
 
@@ -181,7 +181,7 @@ Focus is understanding, not benchmark accuracy
 
 Code is extensible to datasets like MNIST
 
-🔮 Future Improvements
+# 🔮 Future Improvements
 
 Train both versions on MNIST
 
@@ -195,7 +195,7 @@ Unit tests for gradients
 
 Performance comparison (NumPy vs PyTorch)
 
-🎯 Learning Outcomes
+# 🎯 Learning Outcomes
 
 By completing this project, you will:
 
