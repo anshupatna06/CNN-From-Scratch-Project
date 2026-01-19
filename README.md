@@ -1,66 +1,70 @@
-# CNN-From-Scratch-Project
-# 🧠 Convolutional Neural Network (CNN) From Scratch — NumPy Only
+🧠 Convolutional Neural Network — From Scratch & PyTorch
 
-This project implements a **full Convolutional Neural Network (CNN) from scratch** using only **NumPy**, without relying on deep learning frameworks like TensorFlow or PyTorch.
+This repository demonstrates two complete implementations of a Convolutional Neural Network (CNN):
 
-The goal of this project is to deeply understand:
-- How CNNs work mathematically
-- How forward and backward propagation are implemented
-- How filters are learned
-- How spatial dimensions flow through layers
-- How gradients are computed manually
+CNN from Scratch (NumPy only) — manual forward & backward propagation
 
-This repository is designed for **learning, research, and interview preparation**.
+CNN using PyTorch — framework-based, production-style implementation
 
----
+The goal is deep conceptual understanding + practical engineering skills.
 
-## 🚀 Key Features
+Most projects show how to use CNNs.
+This project shows how CNNs actually work internally.
 
--  Convolution forward & backward pass (from scratch)
--  `im2col` and `col2im` optimization
--  ReLU activation (forward & backward)
--  Max Pooling layer (forward & backward)
--  Flatten layer
--  Fully Connected (Dense) layer
--  Softmax + Cross Entropy loss
--  Complete CNN pipeline
--  Shape-safe implementation
--  Jupyter notebook for visualizations
--  Feature map & filter visualizations
+🔍 Why This Project Matters
 
----
+Builds CNNs mathematically from first principles
 
-## 🧱 Project Structure
+Implements manual backpropagation through convolution
+
+Demonstrates ability to translate theory → code
+
+Shows framework independence (NumPy → PyTorch)
+
+Strong signal for ML Intern / SWE / Research roles
+
+This repository is designed for:
+
+ML / DL interview preparation
+
+Research-oriented learning
+
+Systems-level understanding of deep learning
+
+🗂️ Repository Structure
 CNN-From-Scratch-Project/
 │
-├── src/ # Core CNN implementation
-│ ├── conv_forward.py
-│ ├── conv_backward.py
-│ ├── im2col.py
-│ ├── col2im.py
-│ ├── relu.py
-│ ├── maxpool.py
-│ ├── flatten.py
-│ ├── dense.py
-│ ├── softmax_loss.py
-│ └── cnn_model.py
+├── scratch_cnn/                 # NumPy-only implementation
+│   ├── conv_forward.py
+│   ├── conv_backward.py
+│   ├── im2col.py
+│   ├── col2im.py
+│   ├── relu.py
+│   ├── maxpool.py
+│   ├── flatten.py
+│   ├── dense.py
+│   ├── softmax_loss.py
+│   └── cnn_model.py
+│
+├── pytorch_cnn/                 # PyTorch implementation
+│   ├── model.py
+│   ├── train.py
+│   ├── dataset.py
+│   └── utils.py
 │
 ├── notebooks/
-│ └── CNN_From_Scratch.ipynb # Training & visualizations
+│   ├── CNN_From_Scratch.ipynb
+│   └── CNN_PyTorch.ipynb
 │
-├── visuals/ # Generated visual outputs
-│ ├── training_loss_curve.png
-│ ├── feature_maps.png
-│ ├── learned_filters.png
+├── visuals/
+│   ├── training_loss_curve.png
+│   ├── feature_maps.png
+│   └── learned_filters.png
 │
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 
-
----
-
-## 🧠 CNN Architecture
-
+🧠 CNN Architecture (Both Versions)
 Input Image (N, 1, 28, 28)
 ↓
 Convolution (3×3 filters)
@@ -75,45 +79,89 @@ Fully Connected Layer
 ↓
 Softmax
 ↓
-Loss
+Cross-Entropy Loss
 
----
+🧪 Implementation 1: CNN From Scratch (NumPy)
+✅ What’s implemented manually
 
-## 📐 Mathematical Concepts Used
+Convolution (forward & backward)
 
-- Convolution operation
-- Sliding window & receptive fields
-- `im2col` matrix transformation
-- Backpropagation through convolution
-- Chain rule
-- Gradient descent
-- Softmax probability distribution
-- Cross-entropy loss
+im2col / col2im optimizations
 
----
+ReLU activation (forward & backward)
 
-## 📊 Visualizations Included
+Max Pooling (forward & backward)
 
-The Jupyter notebook generates:
-- 📉 Training loss curve
-- 🧩 Feature maps after convolution
-- 🎯 Learned convolution filters
-- 📊 Softmax output probabilities
+Dense layer
 
-These visualizations help in **interpreting what the CNN learns internally**.
+Softmax + Cross Entropy loss
 
----
+Gradient computation using chain rule
 
-## ▶️ How to Run
+Shape-safe tensor handling
 
-### 1️⃣ Clone the repository
-```bash
+🧠 Concepts Covered
+
+Sliding window convolution
+
+Receptive fields
+
+Parameter sharing
+
+Gradient flow through convolution
+
+Numerical stability
+
+Manual backpropagation
+
+This implementation does not use TensorFlow or PyTorch — only NumPy.
+
+⚡ Implementation 2: CNN Using PyTorch
+✅ What’s included
+
+Modular CNN model (nn.Module)
+
+Clean training loop
+
+Dataset abstraction
+
+Loss & optimizer handling
+
+GPU-ready architecture
+
+Comparison with scratch implementation
+
+🎯 Purpose
+
+Show production-style ML engineering
+
+Validate scratch implementation correctness
+
+Bridge theory → real-world ML pipelines
+
+📊 Visualizations
+
+Generated through notebooks:
+
+📉 Training loss curves
+
+🧩 Feature maps after convolution
+
+🎯 Learned filters visualization
+
+📊 Softmax probability outputs
+
+These help interpret what the CNN is learning internally, not just final accuracy.
+
+▶️ How to Run
+1️⃣ Clone the repository
 git clone https://github.com/anshupatna06/CNN-From-Scratch-Project.git
 cd CNN-From-Scratch-Project
+
 2️⃣ Install dependencies
 pip install -r requirements.txt
 
-3️⃣ Run Jupyter Notebook
+3️⃣ Run notebooks
 jupyter notebook
 
 
@@ -121,56 +169,43 @@ Open:
 
 notebooks/CNN_From_Scratch.ipynb
 
+notebooks/CNN_PyTorch.ipynb
 
-Run all cells top-to-bottom.
+Run cells top-to-bottom.
 
-##🧪 Notes
+🧪 Notes
 
-The CNN is trained on dummy / synthetic data for demonstration.
+Scratch CNN uses synthetic / small-scale data for clarity
 
-The goal is conceptual clarity, not accuracy benchmarking.
+Focus is understanding, not benchmark accuracy
 
-The implementation is fully extensible to real datasets like MNIST.
+Code is extensible to datasets like MNIST
 
 🔮 Future Improvements
 
-Train on MNIST dataset
+Train both versions on MNIST
 
 Add Adam optimizer
 
-Add batch normalization
+Batch Normalization
 
-Add multiple convolution layers
+Multiple convolution blocks
 
-Compare with PyTorch implementation
+Unit tests for gradients
 
-Add unit tests
+Performance comparison (NumPy vs PyTorch)
 
-🎯 Learning Outcome
+🎯 Learning Outcomes
 
 By completing this project, you will:
 
-Understand CNNs at a mathematical level
+Understand CNNs mathematically and programmatically
 
-Be confident implementing deep learning models from scratch
+Gain confidence in debugging deep learning models
 
-Gain strong debugging intuition
+Be able to explain CNN internals in interviews
 
-Be well-prepared for ML/DL interviews
-🙌 Acknowledgement
-
-Inspired by:
-
-CS231n (Stanford)
-
-Deep Learning Specialization
-
-Research-oriented learning approach
-
-⭐ If you find this project helpful, feel free to star the repository!
+Demonstrate framework-agnostic ML thinking
 
 
------------------------------------------
-
-
-
+⭐ If this repository helped you, feel free to star it!
