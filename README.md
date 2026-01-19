@@ -1,4 +1,4 @@
-🧠 Convolutional Neural Network — From Scratch & PyTorch
+# 🧠 Convolutional Neural Network — From Scratch & PyTorch
 
 This repository demonstrates two complete implementations of a Convolutional Neural Network (CNN):
 
